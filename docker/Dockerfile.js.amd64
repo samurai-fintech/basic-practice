@@ -1,0 +1,28 @@
+FROM debian:jessie
+
+MAINTAINER Joel De Jesus "joel.dejesus@samurai-fintech.com"
+
+ENV DEBIAN_FRONTEND noninteractive
+
+ARG proxy
+ARG useruid
+
+RUN if [ -z ${proxy+x} ]; then echo "Going WITHOUT an apt proxy" 1>&2; else echo "Acquire::http::Proxy \"http://$proxy\";" > /etc/apt/apt.conf.d/proxy.conf && echo "Going WITH an apt proxy" 1>&2 ; fi 
+
+RUN apt-get update && apt-get install -y \
+  libssl-dev build-essential sudo curl git-core && \
+  useradd -ms /bin/false -u $useruid builder || echo "already exists"
+
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+  apt-get install -y nodejs && mkdir /var/share/nodejs && chown -R builder:builder /var/share/nodejs
+
+COPY docker/run-js.sh /usr/local/bin/run-js
+
+WORKDIR /var/share/nodejs
+
+USER builder
+
+
+CMD ["/usr/local/bin/run-js"]
+
