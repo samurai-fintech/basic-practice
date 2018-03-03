@@ -10,3 +10,5 @@ For other languages, see:
 
 
 Practice handling Bitcoin with Javascript.
+
+The practice file is [here](js/simple-spend.js).
