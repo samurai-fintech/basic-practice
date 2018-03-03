@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-  apt-get install -y nodejs && mkdir /var/share/nodejs && chown -R builder:builder /var/share/nodejs
+  apt-get install -y nodejs && mkdir -p /var/share/nodejs && chown -R builder:builder /var/share/nodejs
 
 COPY docker/run-js.sh /usr/local/bin/run-js
 

@@ -29,3 +29,11 @@ To create the docker image and container for doing node js work:
 ## Perl BTC Wallet
 
 For Perl, we have [a simple program for transactions set up](pl/simple-wallet.pl).
+
+
+
+# Install Docker
+
+*  [For Mac](https://docs.docker.com/docker-for-mac/install/)
+*  [For Debian/Ubuntu](https://docs.docker.com/install/linux/docker-ce/debian/)
+*  [For Windows](https://docs.docker.com/docker-for-windows/install/) - but the UX in Windows is very, very different from the other two
