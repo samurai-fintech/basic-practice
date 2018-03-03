@@ -1,5 +1,31 @@
- 
+/*
+ *  このプログラムの目的は、手動でビットコインを送金することです。
+ * This program lets you spend bitcoin on the test net.
+ * 
+ *
+ */
+
+
+
+// https://github.com/bitcoinjs/bitcoinjs-lib 
 var bitcoin = require('bitcoinjs-lib');
+var mynetwork = bitcoin.networks.testnet; // 本物のお金の場合はlivenetにする For real money, use "livenet"
+
+/*
+ * 新しい秘密鍵を作ってWIFとして出力する
+ * Create a private key  and address
+*/
+var myWIF = bitcoin.ECPair.makeRandom().toWIF();
+console.log('My super secret private key='+myWIF);
+var keyPair = bitcoin.ECPair.fromWIF(myWIF);
+var address = keyPair.getAddress();
+console.log('My public, shareable address='+address);
+
+
+/*
+ * 下記のコードに適用な変数を設定しないといけない。
+ *　You have to fill in the values below.
+*/
 
 var privkey = 'WIFPRIVATEKEY';
 var addrPre = 'ADDRESSFORPRIVATEKEY';
