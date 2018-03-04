@@ -6,6 +6,12 @@
 簡単に開発環境を整うためにDockerコンテナーがたくさん活用されています。Mac・Linuxをご利用になっている方は簡単にインストールすることができますが、Windowsを持ちの方は安い仮想サーバーを借りたほうがおすすめです。
 
 
+## 無料のテストコイン
+
+テストするためにコインを取得しないといけませんので、下記のリンクにとんでもらいます。
+
+[Hamburg Testnet Faucet](https://testnet.manu.backend.hamburg/faucet)
+
 ## Node.jsのビットコイン財布
 
 

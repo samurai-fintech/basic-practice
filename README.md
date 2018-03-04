@@ -9,6 +9,12 @@ For other languages, see:
 To avoid messing up the development environment, Docker is used frequently to contain all the working code.  It is highly recommended that you become familiar with how Docker works.  If you have a Linux and/or Mac OS, then it will be easy to set up.  If you have Windows, it is recommended that you spend money (10 USD/month) on a remote server.  It is the same price as 2 cocktails at Starbucks.
 
 
+## Testnet Faucet
+
+In order to do testing, you need to get test coins.  Go to the link below and get some free testnet coins.
+
+[Hamburg Testnet Faucet](https://testnet.manu.backend.hamburg/faucet)
+
 ## Node.js BTC Wallet
 
 
