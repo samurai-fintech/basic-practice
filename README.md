@@ -15,6 +15,8 @@ In order to do testing, you need to get test coins.  Go to the link below and ge
 
 [Hamburg Testnet Faucet](https://testnet.manu.backend.hamburg/faucet)
 
+[This is the testnet block chain explorer](https://live.blockcypher.com/btc-testnet/).
+
 ## Node.js BTC Wallet
 
 

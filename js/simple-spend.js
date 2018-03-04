@@ -15,9 +15,9 @@ var mynetwork = bitcoin.networks.testnet; // 本物のお金の場合はlivenet�
  * 新しい秘密鍵を作ってWIFとして出力する
  * Create a private key  and address
 */
-var myWIF = bitcoin.ECPair.makeRandom().toWIF();
+var myWIF = bitcoin.ECPair.makeRandom({ network: mynetwork }).toWIF();
 console.log('My super secret private key='+myWIF);
-var keyPair = bitcoin.ECPair.fromWIF(myWIF);
+var keyPair = bitcoin.ECPair.fromWIF(myWIF,mynetwork);
 var address = keyPair.getAddress();
 console.log('My public, shareable address='+address);
 
