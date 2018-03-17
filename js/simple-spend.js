@@ -21,16 +21,22 @@ var keyPair = bitcoin.ECPair.fromWIF(myWIF,mynetwork);
 var address = keyPair.getAddress();
 console.log('My public, shareable address='+address);
 
+var myWIFSecond = bitcoin.ECPair.makeRandom({ network: mynetwork }).toWIF();
+console.log('My Second super secret private key='+myWIFSecond);
+var keyPairSecond = bitcoin.ECPair.fromWIF(myWIFSecond,mynetwork);
+var addressSecond = keyPairSecond.getAddress();
+console.log('My Second public, shareable address='+addressSecond);
+
 
 /*
  * 下記のコードに適用な変数を設定しないといけない。
  *　You have to fill in the values below.
 */
 
-var privkey = 'WIFPRIVATEKEY';
-var addrPre = 'ADDRESSFORPRIVATEKEY';
+var privkey = 'WIFPRIVATEKEY';             // <----copy myWIF here
+var addrPre = 'ADDRESSFORPRIVATEKEY';      // 
 var toAddr = 'DESTADDR';
-var currentBalance = 'PRIVKEYBALANCE' ;
+var currentBalance = 1.3 ;
 // 現在の手数料をこのサイトから見ました。
 //  https://bitcoinfees.21.co/api/v1/fees/recommended
 var fee = 225 * 100;
@@ -53,4 +59,5 @@ txb.addOutput(toAddr, toValue);
 // 秘密鍵で署名付けをする
 txb.sign(0, keyPair);
 
+// 送金するには、https://live.blockcypher.com/btc-testnet/pushtx/に貼り付ける
 console.log(txb.build().toHex());

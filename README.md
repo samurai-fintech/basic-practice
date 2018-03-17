@@ -8,6 +8,13 @@ For other languages, see:
 
 To avoid messing up the development environment, Docker is used frequently to contain all the working code.  It is highly recommended that you become familiar with how Docker works.  If you have a Linux and/or Mac OS, then it will be easy to set up.  If you have Windows, it is recommended that you spend money (10 USD/month) on a remote server.  It is the same price as 2 cocktails at Starbucks.
 
+# Preparation
+
+[See this page](CheatSheet.md).
+
+
+# Bitcoin Practice
+
 
 ## Testnet Faucet
 
