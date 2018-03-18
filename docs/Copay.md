@@ -33,4 +33,21 @@ npm start
 
 # Modifying
 
-Take a look at *app-templates*. 
+To change logos:
+
+* *app-templates* - `cp -r copay mycompanyname`
+* *resources* - `cp -r copay mycompanyname`
+
+Then edit *app-template/package-template.json* and copy the field: 
+
+```console
+    "apply:copay":            "npm i fs-extra && cd app-template && node apply.js copay && npm i && cordova prepare",
+```
+
+and paste one for yourself:
+
+```console
+    "apply:mycompany":            "npm i fs-extra && cd app-template && node apply.js mycompany && npm i && cordova prepare",
+```
+
+
