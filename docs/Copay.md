@@ -47,7 +47,12 @@ Then edit *app-template/package-template.json* and copy the field:
 and paste one for yourself:
 
 ```console
-    "apply:mycompany":            "npm i fs-extra && cd app-template && node apply.js mycompany && npm i && cordova prepare",
+    "apply:mycompanyname":            "npm i fs-extra && cd app-template && node apply.js mycompanyname && npm i && cordova prepare",
 ```
 
+Once finished, clean and build:
 
+```bash
+npm run clean-all
+npm run apply:mycompanyname
+```
