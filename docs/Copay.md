@@ -50,6 +50,14 @@ and paste one for yourself:
     "apply:mycompanyname":            "npm i fs-extra && cd app-template && node apply.js mycompanyname && npm i && cordova prepare",
 ```
 
+Then commit changes:
+
+```bash
+git add .
+git checkout -b t-mycompany
+git commit -m "my custom commit"
+```
+
 Once finished, clean and build:
 
 ```bash
